@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenMedia Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="app-header">
+        <h1>OpenMedia Search</h1>
+        <div class="auth-buttons">
+            <button id="login-btn" class="btn">Login</button>
+            <button id="register-btn" class="btn">Register</button>
+            <button id="logout-btn" class="btn hidden">Logout</button>
+        </div>
+    </header>
+
+    <div class="hero-section">
+        <div class="hero-overlay">
+            <h2>Discover and download free and open license media</h2>
+            <p>Search for images, audio, and more from a vast library of open license media</p>
+        </div>
+        <img src="hero-image.jpg" alt="Hero Image" class="hero-image">
+    </div>
+
+    <div class="auth-forms hidden">
+        <div class="auth-form" id="login-form">
+            <h2>Login</h2>
+            <input type="email" id="login-email" placeholder="Email" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button id="submit-login" class="btn">Submit</button>
+            <button id="cancel-login" class="btn btn-secondary">Cancel</button>
+        </div>
+
+        <div class="auth-form" id="register-form">
+            <h2>Register</h2>
+            <input type="text" id="register-name" placeholder="Full Name" required>
+            <input type="email" id="register-email" placeholder="Email" required>
+            <input type="password" id="register-password" placeholder="Password" required>
+            <button id="submit-register" class="btn">Submit</button>
+            <button id="cancel-register" class="btn btn-secondary">Cancel</button>
+        </div>
+    </div>
+
+    <main class="app-container">
+        <section class="search-section">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search for images, audio...">
+                <select id="media-type">
+                    <option value="all">All Media</option>
+                    <option value="image">Images</option>
+                    <option value="audio">Audio</option>
+                </select>
+                <button id="search-btn" class="btn">Search</button>
+                <button id="advanced-search-btn" class="btn btn-secondary">Advanced</button>
+            </div>
+
+            <div class="advanced-search hidden">
+                <div class="filter-group">
+                    <label for="license-type">License:</label>
+                    <select id="license-type">
+                        <option value="all">All Licenses</option>
+                        <option value="cc0">CC0</option>
+                        <option value="by">CC BY</option>
+                        <option value="by-sa">CC BY-SA</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="extension">Extension:</label>
+                    <input type="text" id="extension" placeholder="e.g. jpg, mp3">
+                </div>
+            </div>
+        </section>
+
+        <section class="feature-section">
+            <div class="feature-row">
+                <div class="feature-icon">
+                    <!-- Search SVG Icon -->
+                    <svg width="36" height="36" fill="none" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" stroke="#4285f4" stroke-width="2"/><path d="M20 20l-3.5-3.5" stroke="#4285f4" stroke-width="2" stroke-linecap="round"/></svg>
+                </div>
+                <div class="feature-text">
+                    <h3>Search millions of open license media</h3>
+                    <p>Discover and download free and open license media from a vast library.</p>
+                </div>
+            </div>
+
+            <div class="feature-row">
+                <div class="feature-icon">
+                    <!-- Filter SVG Icon -->
+                    <svg width="36" height="36" fill="none" viewBox="0 0 24 24"><path d="M3 5h18M6 10h12M9 15h6M10 20h4" stroke="#34a853" stroke-width="2" stroke-linecap="round"/></svg>
+                </div>
+                <div class="feature-text">
+                    <h3>Filter by license, extension, and more</h3>
+                    <p>Narrow down your search with advanced filters to find the perfect media.</p>
+                </div>
+            </div>
+
+            <div class="feature-row">
+                <div class="feature-icon">
+                    <!-- Save SVG Icon -->
+                    <svg width="36" height="36" fill="none" viewBox="0 0 24 24"><path d="M5 4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H5zm0 0v16m0-16h14m-7 4v8m0 0l-3-3m3 3l3-3" stroke="#ea4335" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="feature-text">
+                    <h3>Save your searches for later</h3>
+                    <p>Save your searches and come back to them later for easy access.</p>
+                </div>
+            </div>
+
+            <div class="feature-row">
+                <div class="feature-icon">
+                    <!-- Collaboration SVG Icon -->
+                    <svg width="36" height="36" fill="none" viewBox="0 0 24 24"><circle cx="7" cy="7" r="3" stroke="#fbbc05" stroke-width="2"/><circle cx="17" cy="7" r="3" stroke="#fbbc05" stroke-width="2"/><path d="M2 21v-1a4 4 0 0 1 4-4h0a4 4 0 0 1 4 4v1" stroke="#fbbc05" stroke-width="2"/><path d="M14 21v-1a4 4 0 0 1 4-4h0a4 4 0 0 1 4 4v1" stroke="#fbbc05" stroke-width="2"/></svg>
+                </div>
+                <div class="feature-text">
+                    <h3>Collaborate and Share</h3>
+                    <p>Invite friends and colleagues to discover and curate media collections together.</p>
+                </div>
+            </div>
+
+            <div class="feature-row">
+                <div class="feature-icon">
+                    <!-- Security SVG Icon -->
+                    <svg width="36" height="36" fill="none" viewBox="0 0 24 24"><path d="M12 3l7 4v5c0 5.25-3.5 9.74-7 11C8.5 21.74 5 17.25 5 12V7l7-4z" stroke="#4285f4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="13" r="2" stroke="#4285f4" stroke-width="2"/></svg>
+                </div>
+                <div class="feature-text">
+                    <h3>Secure and Private</h3>
+                    <p>Your data is protected and never shared. Enjoy safe, private searching.</p>
+                </div>
+            </div>
+
+            <div class="feature-row">
+                <div class="feature-icon">
+                    <!-- Speed SVG Icon -->
+                    <svg width="36" height="36" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="#34a853" stroke-width="2"/><path d="M12 6v6l4 2" stroke="#34a853" stroke-width="2" stroke-linecap="round"/></svg>
+                </div>
+                <div class="feature-text">
+                    <h3>Lightning Fast</h3>
+                    <p>Instant results thanks to optimized API integration and smart caching.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="results-section">
+            <div class="results-header">
+                <h2>Search Results</h2>
+                <button id="save-search-btn" class="btn hidden">Save Search</button>
+            </div>
+            <div id="results-container" class="results-grid"></div>
+            <div id="loading-spinner" class="spinner hidden"></div>
+            <div id="no-results" class="hidden">No results found. Try a different search.</div>
+        </section>
+
+        <section class="saved-searches-section hidden">
+            <h2>Saved Searches</h2>
+            <div id="saved-searches-list"></div>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <p>Powered by Openverse API | Open License Media Search</p>
+    </footer>
+
+    <script src="auth.js"></script>
+    <script src="search.js"></script>
+    <script src="saved-searches.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

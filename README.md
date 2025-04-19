@@ -35,6 +35,3 @@ A web application for searching open-license media using the Openverse API.
   - Proper session management
   - Database for persistent storage
 
-## License
-
-MIT License

@@ -35,3 +35,22 @@ A web application for searching open-license media using the Openverse API.
   - Proper session management
   - Database for persistent storage
 
+## Docker
+
+You can run this project in a Docker container using nginx to serve the static files.
+
+### Steps
+
+1. Ensure you have [Docker](https://www.docker.com/products/docker-desktop/) installed and running.
+2. Build the Docker image:
+   ```sh
+   docker build -t openmediasearch .
+   ```
+3. Run the Docker container:
+   ```sh
+   docker run -d -p 8080:80 openmediasearch
+   ```
+4. Open your browser and visit [http://localhost:8080](http://localhost:8080)
+
+This will serve the app using nginx inside Docker. If you make changes to the code, rebuild the image to see updates.
+

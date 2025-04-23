@@ -17,7 +17,7 @@ A web application for searching open-license media using the Openverse API.
 - JavaScript (ES6)
 - Openverse API
 
-## Setup
+## Setup and Working
 
 1. Clone this repository
 2. Open `index.html` in a web browser
